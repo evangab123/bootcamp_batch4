@@ -13,7 +13,7 @@ contract Lending {
     address usdc = 0xaf88d065e77c8cC2239327C5EDb3A432268e5831;
     address aave = 0x794a61358D6845594F94dc1DB02A252b5b4814aD;
 
-    function supplyAndBroow(uint256 supplyAmount, uint256 borrowAmount) external {
+    function supplyAndBorrow(uint256 supplyAmount, uint256 borrowAmount) external {
         IERC20(weth).transferFrom(msg.sender, address(this), supplyAmount);
 
         IERC20(weth).approve(aave, supplyAmount);
